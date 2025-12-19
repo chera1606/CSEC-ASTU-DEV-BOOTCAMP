@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toggle Text</title>
+
+    <style>
+      body {
+        margin: 0;
+        background-color: lightgray;
+        font-family: Arial;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      h1 {
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 30px;
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1 id="text">OFF</h1>
+      <button onclick="change()">Toggle</button>
+    </div>
+
+    <script>
+      var state = "OFF";
+
+      function change() {
+        if (state == "OFF") {
+          document.getElementById("text").innerHTML = "ON";
+          state = "ON";
+        } else {
+          document.getElementById("text").innerHTML = "OFF";
+          state = "OFF";
+        }
+      }
+    </script>
+  </body>
+</html>
