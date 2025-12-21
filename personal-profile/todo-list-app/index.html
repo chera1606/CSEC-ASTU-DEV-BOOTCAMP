@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <h1>Todo List App</h1>
+
+      <div class="todo-input">
+        <input type="text" id="inputTodo" placeholder="Write a new task" />
+        <button id="btnAdd">Add Todo</button>
+      </div>
+
+      <ul id="listTodos"></ul>
+
+      <div class="todo-stats">
+        <p>Total Todos: <span id="totalCount">0</span></p>
+        <p>Completed Todos: <span id="doneCount">0</span></p>
+      </div>
+
+      <button id="btnClear" class="clear-btn">Clear All Todos</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
